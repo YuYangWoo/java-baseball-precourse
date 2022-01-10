@@ -14,7 +14,6 @@ public class Input {
         } catch (Exception e) {
             Output.printExceptionMessage(e.getMessage());
         }
-        checkNumber(input);
         return input;
     }
 
@@ -25,20 +24,6 @@ public class Input {
             input = Console.readLine();
         } catch (Exception e) {
             Output.printExceptionMessage(e.getMessage());
-        }
-        return input;
-    }
-
-    public static String checkNumber(String input) {
-        if (input.length() == 3 &&
-            Character.isDigit(input.charAt(0)) &&
-            Character.isDigit(input.charAt(1)) &&
-            Character.isDigit(input.charAt(2))) {
-            return input;
-        } else {
-            System.out.println("[Error]" + input);
-            BaseballGame baseballGame = new BaseballGame();
-            baseballGame.playBaseBall();
         }
         return input;
     }
