@@ -6,7 +6,7 @@ import nextstep.utils.Console;
 
 public class Input {
 
-    public String inputYourNumber() {
+    public static String inputYourNumber() {
         String input = "";
         Output.printRequestNumberInput();
         try {
@@ -18,7 +18,18 @@ public class Input {
         return input;
     }
 
-    public String checkNumber(String input) {
+    public static String resumeYourNumber() {
+        String input = "";
+        Output.printRequestResumeInput();
+        try {
+            input = Console.readLine();
+        } catch (Exception e) {
+            Output.printExceptionMessage(e.getMessage());
+        }
+        return input;
+    }
+
+    public static String checkNumber(String input) {
         if (input.length() == 3 &&
             Character.isDigit(input.charAt(0)) &&
             Character.isDigit(input.charAt(1)) &&
