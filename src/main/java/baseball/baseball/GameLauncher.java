@@ -1,11 +1,10 @@
-package baseball;
+package baseball.baseball;
 
-import baseball.baseball.BaseballGame;
 import nextstep.utils.IsResumeOrNot;
 import baseball.ui.Input;
 import baseball.ui.Output;
 
-public class Launcher {
+public class GameLauncher {
 
     public void start() {
        do {

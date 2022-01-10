@@ -1,7 +1,5 @@
 package baseball.ui;
 
-import baseball.Launcher;
-import baseball.baseball.BaseballGame;
 import nextstep.utils.Console;
 
 public class Input {

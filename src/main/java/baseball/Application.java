@@ -1,14 +1,12 @@
 package baseball;
 
 
-import java.io.IOException;
-import nextstep.utils.Console;
-import nextstep.utils.Randoms;
+import baseball.baseball.GameLauncher;
 
 public class Application {
 
     public static void main(String[] args) {
-        Launcher launcher = new Launcher();
-        launcher.start();
+        GameLauncher gameLauncher = new GameLauncher();
+        gameLauncher.start();
     }
 }

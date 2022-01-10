@@ -3,7 +3,6 @@ package nextstep.utils;
 import baseball.ui.Output;
 
 public class IsValidInput {
-
     public final static int VALID_OPINION_INPUT_SIZE = 3;
     public final static int FIRST = 0;
     public final static int MIDDLE = 1;
@@ -15,15 +14,18 @@ public class IsValidInput {
         this.YOUR_INPUT = your_input;
         isValidLength(YOUR_INPUT);
         isDigitNumber(YOUR_INPUT);
+        if(IsDuplicated.isCheck(YOUR_INPUT)) {
+            throw new IllegalArgumentException(Output.INPUT_DUPLICATED_NUMBER_MESSAGE);
+        }
     }
 
-    public void isValidLength(String your_input) {
+    private void isValidLength(String your_input) {
         if(your_input.length() != VALID_OPINION_INPUT_SIZE) {
             throw new IllegalArgumentException(Output.BASEBALLS_SIZE_EXCEPTION_MESSAGE);
         }
     }
 
-    public void isDigitNumber(String your_input) {
+    private void isDigitNumber(String your_input) {
         if(!Character.isDigit(your_input.charAt(FIRST)) ||
             !Character.isDigit(your_input.charAt(MIDDLE)) ||
             !Character.isDigit(your_input.charAt(LAST))) {
@@ -31,8 +33,8 @@ public class IsValidInput {
         }
     }
 
-    public boolean isChecked() {
-        return true;
+    public String isChecked() {
+        return YOUR_INPUT;
     }
 
 }
