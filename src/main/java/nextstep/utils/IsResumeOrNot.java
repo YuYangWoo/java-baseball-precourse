@@ -11,7 +11,6 @@ public class IsResumeOrNot {
 
     public IsResumeOrNot(String userReply) {
         isValidLength(userReply);
-
         this.opinion = Integer.parseInt(userReply);
         isValidOpinionRange(opinion);
     }

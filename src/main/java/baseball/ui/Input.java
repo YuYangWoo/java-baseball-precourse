@@ -7,11 +7,7 @@ public class Input {
     public static String inputYourNumber() {
         String input = "";
         Output.printRequestNumberInput();
-        try {
-            input = Console.readLine();
-        } catch (Exception e) {
-            Output.printExceptionMessage(e.getMessage());
-        }
+        input = Console.readLine();
         return input;
     }
 

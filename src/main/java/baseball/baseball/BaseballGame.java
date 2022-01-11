@@ -10,11 +10,11 @@ public class BaseballGame {
     String userNumber = "";
 
     public void playBaseBall() {
-        Input input = new Input();
         BaseBallPlaying baseBallPlaying = new BaseBallPlaying();
         computerNumber = Computer.getComputerNumber();
         do {
             try {
+                Input input = new Input();
                 IsValidInput isValidInput = new IsValidInput(input.inputYourNumber());
                 userNumber = isValidInput.isChecked();
                 String result = baseBallPlaying.getGameScore(userNumber, computerNumber);
