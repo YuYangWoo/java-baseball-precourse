@@ -8,7 +8,6 @@ public class BaseBallPlaying {
         int strike = countStrike(userNumber, computerNumber);
         int ball = countBall(userNumber, computerNumber);
         Result result = new Result(strike, ball);
-        Output.printBaseballGaemResult(result.getResult());
         return result.getResult();
     }
 
