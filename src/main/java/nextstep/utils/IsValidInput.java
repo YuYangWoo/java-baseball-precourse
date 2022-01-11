@@ -14,7 +14,8 @@ public class IsValidInput {
         this.YOUR_INPUT = your_input;
         isValidLength(YOUR_INPUT);
         isDigitNumber(YOUR_INPUT);
-        if(IsDuplicated.isCheck(YOUR_INPUT)) {
+        IsDuplicated isDuplicated = new IsDuplicated();
+        if(isDuplicated.isCheck(YOUR_INPUT)) {
             throw new IllegalArgumentException(Output.INPUT_DUPLICATED_NUMBER_MESSAGE);
         }
     }

@@ -1,6 +1,5 @@
 package baseball;
 
-
 import baseball.baseball.GameLauncher;
 
 public class Application {

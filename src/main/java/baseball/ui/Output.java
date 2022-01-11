@@ -24,12 +24,12 @@ public class Output {
         System.out.println(REQUIRE_RESTART_INPUT_MESSAGE);
     }
 
-    public static void printBaseballGaemResult(String result) {
-        System.out.println(result);
-    }
-
     public static void printCorrectAnswer() {
         System.out.println(CORRECT_ANSWER_AND_EXIT_MESSAGE);
+    }
+
+    public static void printBaseballGaemResult(String result) {
+        System.out.println(result);
     }
 
     public static void printExceptionMessage(String exceptionMessage) {

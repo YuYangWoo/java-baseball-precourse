@@ -13,7 +13,8 @@ public class BaseballGame {
         Input input = new Input();
         BaseBallPlaying baseBallPlaying = new BaseBallPlaying();
         do {
-            computerNumber = Computer.getComputerNumber();
+            Computer computer = new Computer();
+            computerNumber = computer.getComputerNumber();
             try {
                 IsValidInput isValidInput = new IsValidInput(input.inputYourNumber());
                 userNumber = isValidInput.isChecked();
@@ -21,16 +22,12 @@ public class BaseballGame {
             } catch (IllegalArgumentException e) {
                 Output.printExceptionMessage(e.getMessage());
             }
-        } while(checkEqual());
+        } while(!checkEqual());
+        Output.printCorrectAnswer();
     }
 
     public boolean checkEqual() {
-        if(computerNumber.equals(userNumber)) {
-            return false;
-        }
-        else {
-            return true;
-        }
+       return userNumber.equals(computerNumber);
     }
 
 }
