@@ -10,13 +10,12 @@ public class BaseballGame {
     String userNumber = "";
 
     public void playBaseBall() {
-        BaseBallPlaying baseBallPlaying = new BaseBallPlaying();
         computerNumber = Computer.getComputerNumber();
         do {
             try {
-                Input input = new Input();
-                IsValidInput isValidInput = new IsValidInput(input.inputYourNumber());
+                IsValidInput isValidInput = new IsValidInput(Input.inputYourNumber());
                 userNumber = isValidInput.isChecked();
+                BaseBallPlaying baseBallPlaying = new BaseBallPlaying();
                 String result = baseBallPlaying.getGameScore(userNumber, computerNumber);
                 Output.printBaseballGaemResult(result);
             } catch (IllegalArgumentException e) {

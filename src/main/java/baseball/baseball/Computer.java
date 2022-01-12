@@ -1,6 +1,5 @@
 package baseball.baseball;
 
-import nextstep.utils.IsDuplicated;
 import nextstep.utils.Randoms;
 
 public class Computer {
