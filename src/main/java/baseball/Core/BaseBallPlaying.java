@@ -1,7 +1,5 @@
 package baseball.Core;
 
-import baseball.ui.Output;
-
 public class BaseBallPlaying {
 
     public String getGameScore(String userNumber, String computerNumber) {
